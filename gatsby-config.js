@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -7,8 +11,9 @@ module.exports = {
     {
       resolve: "gatsby-source-shopify",
       options: {
-        shopName: "vollmer-farm.myshopify.com",
-        accessToken: "",
+        password: process.env.SHOPIFY_ADMIN_PASSWORD,
+        storeUrl: "vollmer-farm.myshopify.com",
+        salesChannel: "gatsby-app",
       },
     },
     "gatsby-plugin-emotion",
