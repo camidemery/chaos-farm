@@ -23,6 +23,7 @@ export const query = graphql`
         id
         variants {
           price
+          shopifyId
         }
         featuredImage {
           gatsbyImageData(
