@@ -33,11 +33,10 @@ export const query = graphql`
     }
   }
 `;
-// markup
+
 const IndexPage = ({ data }) => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
       <h1>Hello</h1>
       <div className="products-grid">
         {data.allShopifyProduct.nodes.map((product) => (
